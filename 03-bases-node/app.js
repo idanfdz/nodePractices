@@ -1,9 +1,15 @@
 
 const { crearArchivo } = require('./helpers/multiplicar')
+const argv = require('./config/yargs');
 
 console.clear()
 
-const base = 5;
+// console.log(process.argv);
+console.log(argv);
+console.log('base: yargs', argv.base);
+
+
+// const base = 5;
 
 // Se pasa al archivo multiplicar.js
 // for (let i = 1; i <= 10; i++) {
@@ -20,6 +26,6 @@ const base = 5;
 
 // console.log(`tabla-${base}.txt creado!`);
 
-crearArchivo(base)
-    .then(nombreArchivo => console.log(nombreArchivo, 'creado'))
+crearArchivo(argv.base, argv.list, argv.hasta)
+    .then(nombreArchivo => console.log(nombreArchivo, 'creado'.rainbow))
     .catch(err => console.log(err))
