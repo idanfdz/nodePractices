@@ -1,4 +1,8 @@
+
 #NOTES:
+
+
+The project shows the multiplication tables in txt files and is displayed in the console
 
 ```
 Opciones:
